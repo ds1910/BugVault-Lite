@@ -3,7 +3,6 @@ const express = require("express");
 require('dotenv').config();
 
 
-
 // Connection and middleware requires
 const connectMongoDb = require("./connection");
 const { logReqRes } = require("./middleware");
@@ -27,8 +26,8 @@ connectMongoDb("mongodb://127.0.0.1:27017/BugVault").then(() => {
 });
 
 // EJS setup for server-side rendering
-app.set("view engine", "ejs");
-app.set("views", path.resolve("./views"));
+// app.set("view engine", "ejs");
+// app.set("views", path.resolve("./views"));
 
 
 // Routes
