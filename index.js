@@ -9,10 +9,10 @@ const { logReqRes } = require("./middleware");
 
 // App initialization
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
 // Routers
-
+const bugRouter = require("./routes/bug");
 
 // Middlewares
 app.use(express.json());
@@ -28,7 +28,7 @@ connectMongoDb("mongodb://127.0.0.1:27017/BugVault").then(() => {
 
 
 // Routes
-
+app.use("/bug", bugRouter);
 
 // Start server
 app.listen(port, () => console.log("Server started"));

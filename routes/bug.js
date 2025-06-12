@@ -1,4 +1,14 @@
 const express = require("express");
+
+const {handelCreateNewBug,
+       handelGetAllBugs,
+       handelGetBugById,
+       handelUpdateBugById,
+       handelDeleteBugById,
+       handelUpdateBugStatusById,
+       handelAssingUserToBug,
+       handelGetAllBugsOfUser,}  = require("../controller/bugs");
+
 const router = express.Router();
 
 router.route("/").post(handelCreateNewBug).get(handelGetAllBugs);
@@ -10,3 +20,5 @@ router.route("/:id/status").patch(handelUpdateBugStatusById);
 router.route("/:id/assign/:userId").patch(handelAssingUserToBug);
 
 router.route("/user/:userId").get(handelGetAllBugsOfUser);
+
+module.exports = router;
