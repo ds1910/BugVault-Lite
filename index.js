@@ -25,9 +25,6 @@ connectMongoDb("mongodb://127.0.0.1:27017/BugVault").then(() => {
   console.log("MongoDB connected");
 });
 
-// EJS setup for server-side rendering
-// app.set("view engine", "ejs");
-// app.set("views", path.resolve("./views"));
 
 
 // Routes
