@@ -1,55 +1,40 @@
 const mongoose = require("mongoose");
 
-
 const BugSchema = new mongoose.Schema(
   {
-   
     title: {
       type: String,
       required: true,
       trim: true,
     },
-
-   
     description: {
       type: String,
       required: true,
     },
-
-    // Tags for categorization or filtering (e.g., "frontend", "UI")
     tags: {
       type: [String],
-      default: []
+      default: [],
     },
-
     status: {
       type: String,
       enum: ['open', 'in-progress', 'resolved', 'closed'],
       default: 'open',
     },
-
-    
     priority: {
       type: String,
       enum: ['low', 'medium', 'high', 'critical'],
       default: 'medium',
     },
-
-    
     createdBy: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'User',
+      ref: 'user',
       required: true,
     },
-
-   
     assignedTo: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'User',
+      ref: 'user',
       default: null,
     },
-
-    
     history: [
       {
         status: {
@@ -63,12 +48,10 @@ const BugSchema = new mongoose.Schema(
       },
     ],
   },
-
-  { 
+  {
     timestamps: true,
   }
 );
-
 
 const Bug = mongoose.model("Bug", BugSchema);
 

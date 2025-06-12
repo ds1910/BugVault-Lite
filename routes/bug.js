@@ -15,10 +15,10 @@ router.route("/").post(handelCreateNewBug).get(handelGetAllBugs);
 
 router.route("/:id").get(handelGetBugById).patch(handelUpdateBugById).delete(handelDeleteBugById);
 
-router.route("/:id/status").patch(handelUpdateBugStatusById);
+router.route("/status/:id").patch(handelUpdateBugStatusById);
 
-router.route("/:id/assign/:userId").patch(handelAssingUserToBug);
+router.route("/assign/:id").patch(handelAssingUserToBug);
 
-router.route("/user/:userId").get(handelGetAllBugsOfUser);
+router.route("/user/:id").get(handelGetAllBugsOfUser);
 
 module.exports = router;

@@ -3,14 +3,13 @@ const Bug = require("../model/bug");
 
 const handelCreateNewBug = async (req, res) => {
   const { title, description, tags, status, priority } = req.body;
-  const userId = req.users.id;
 
   if (!title || !description) {
     return res.status(400).json({ error: "Title and Description are required" });
   }
 
   try {
-    await Bug.create({ title, description, tags, status, priority, userId });
+    await Bug.create({ title, description, tags, status, priority });
     return res.status(201).json({ message: "Bug creation successful" });
   } catch (error) {
     return res.status(500).json({ error: "Something went wrong during bug creation" });
@@ -121,10 +120,10 @@ const handelAssingUserToBug = async (req, res) => {
 };
 
 const handelGetAllBugsOfUser = async (req, res) => {
-  const userId = req.users.id;
+  const userId = req.params.id;
 
   try {
-    const bugs = await Bug.find({ userId });
+    const bugs = await Bug.find({ assignedTo: userId });
 
     if (!bugs || bugs.length === 0) {
       return res.status(404).json({ error: "No bugs found for this user" });
