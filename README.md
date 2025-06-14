@@ -187,28 +187,46 @@ Copy
 Edit
 npm run dev
 ---
+---
+---
 
 ## 🔮 Future Enhancements
 
-✅ Frontend Integration with React/Next.js  
-🔁 Email Verification System  
-💬 Real-time comments using Socket.io  
-📊 Bug statistics dashboard for Admin  
-📂 File attachments (screenshots, logs)  
-📌 Label filters & advanced bug search  
-🔒 Rate limiting, helmet, CORS hardening  
-🔍 ElasticSearch-style bug search  
+- ✅ **Frontend Integration with React/Next.js**  
+  Build a sleek, responsive UI for the bug tracking system using modern frontend frameworks.
+
+- 🔁 **Email Verification System**  
+  Add secure email verification during user registration to prevent spam and ensure authenticity.
+
+- 💬 **Real-time Comments using Socket.io**  
+  Implement live comment updates on bugs for seamless team collaboration without page refresh.
+
+- 📊 **Bug Statistics Dashboard for Admin**  
+  Provide insights into bug trends, user activity, and bug status distribution.
+
+- 📂 **File Attachments (Screenshots, Logs)**  
+  Enable users to upload images or log files to clarify bug reports for better debugging.
+
+- 📌 **Label Filters & Advanced Bug Search**  
+  Add tags/labels for bugs and support complex search queries like "open critical bugs by user X".
+
+- 🔒 **Rate Limiting, Helmet, CORS Hardening**  
+  Add security headers and limit API misuse by integrating common Node.js security best practices.
+
+- 🔍 **ElasticSearch-style Bug Search**  
+  Support full-text and fuzzy search using ElasticSearch or MongoDB Atlas Search for fast retrieval.
 
 ---
 
 ## 📄 License
 
-This project is open-source and free to use for learning or as a base for production applications.
+This project is **open-source** and free to use under the MIT License.  
+Feel free to use it for learning, extend it, or even deploy it in production with your own customizations.
 
 ---
 
 ## 🙌 Author
 
-Built with ❤️ by **ds1910**
+Built with ❤️ by **ds1910**  
+If you like this project, consider giving it a ⭐️ and sharing it with fellow developers!
 
-If you like this project, consider giving it a ⭐️ and sharing it with others!
