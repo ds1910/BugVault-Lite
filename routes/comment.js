@@ -7,7 +7,7 @@ const {
   handleDeleteCommentById,
   handleCreateReplyToCommentById,
   handleGetAllRepliesToCommentById,
-} = require("../controller/comment"); // corrected filename typo
+} = require("../controller/commnet"); // corrected filename typo
 
 const router = express.Router();
 

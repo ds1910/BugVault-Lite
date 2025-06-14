@@ -6,7 +6,7 @@ const commentSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    bug: {
+    bugId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "bug",
       required: true,

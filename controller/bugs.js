@@ -2,14 +2,16 @@ const express = require("express");
 const Bug = require("../model/bug");
 
 const handelCreateNewBug = async (req, res) => {
-  const { title, description, tags, status, priority } = req.body;
+  const { title, description, tags, status, priority,createdBy } = req.body;
+
+  console.log(req.body);
 
   if (!title || !description) {
     return res.status(400).json({ error: "Title and Description are required" });
   }
 
   try {
-    await Bug.create({ title, description, tags, status, priority });
+    await Bug.create({ title, description, tags, status, priority,createdBy });
     return res.status(201).json({ message: "Bug creation successful" });
   } catch (error) {
     return res.status(500).json({ error: "Something went wrong during bug creation" });

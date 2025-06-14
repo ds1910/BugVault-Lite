@@ -20,7 +20,7 @@ const commentRouter = require("./routes/comment");
 // Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+// app.use(cookieParser());
 app.use(logReqRes("log.txt"));
 
 

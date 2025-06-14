@@ -10,7 +10,7 @@ const {
   generateRefreshToken,
   verifyAccessToken,
   verifyRefreshToken,
-} = require("../../service/auth");
+} = require("../service/auth");
 
 
 
@@ -101,7 +101,7 @@ const handleUserSignup = async (req, res) => {
 
 
     const loginURL =  `http://localhost:${process.env.PORT}/user/login`;
-    sendmailForSignup({email,name,loginURL});
+    //sendmailForSignup({email,name,loginURL});
 
     if (req.is("application/json")) { 
       return res.status(201).json({ message: "Signup successful" });
