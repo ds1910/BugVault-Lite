@@ -17,29 +17,29 @@ const BugSchema = new mongoose.Schema(
     },
     status: {
       type: String,
-      enum: ['open', 'in-progress', 'resolved', 'closed'],
-      default: 'open',
+      enum: ["open", "in-progress", "resolved", "closed"],
+      default: "open",
     },
     priority: {
       type: String,
-      enum: ['low', 'medium', 'high', 'critical'],
-      default: 'medium',
+      enum: ["low", "medium", "high", "critical"],
+      default: "medium",
     },
     createdBy: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'user',
+      ref: "user",
       required: true,
     },
     assignedTo: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'user',
+      ref: "user",
       default: null,
     },
     history: [
       {
         status: {
           type: String,
-          enum: ['open', 'in-progress', 'resolved', 'closed'],
+          enum: ["open", "in-progress", "resolved", "closed"],
         },
         changedAt: {
           type: Date,
@@ -49,7 +49,7 @@ const BugSchema = new mongoose.Schema(
     ],
   },
   {
-    timestamps: true,
+    timestamps: true, 
   }
 );
 

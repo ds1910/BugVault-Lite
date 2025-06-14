@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const commentSchema = new mongoose.Schema(
   {
@@ -8,16 +8,23 @@ const commentSchema = new mongoose.Schema(
     },
     bug: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'bug',
+      ref: "bug",
       required: true,
     },
     createdBy: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'user',
+      ref: "user",
       required: true,
     },
+    parentComment: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "comment",
+      default: null,
+    },
   },
-  { timestamps: true }
+  {
+    timestamps: true, 
+  }
 );
 
-module.exports = mongoose.model('comment', commentSchema);
+module.exports = mongoose.model("comment", commentSchema);

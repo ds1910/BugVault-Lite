@@ -1,18 +1,33 @@
 const express = require("express");
 const {
   handleCreateNewComment,
+  handleGetAllComment,
   handleGetCommentById,
   handleUpdateCommentById,
   handleDeleteCommentById,
-} = require("../controller/comment");
+  handleCreateReplyToCommentById,
+  handleGetAllRepliesToCommentById,
+} = require("../controller/comment"); // corrected filename typo
 
 const router = express.Router();
 
-router.route("/").post(handleCreateNewComment);
+// Routes for top-level comments
+router
+  .route("/")
+  .post(handleCreateNewComment)
+  .get(handleGetAllComment);
+
+// Routes for operations on a specific comment by ID
 router
   .route("/:id")
   .get(handleGetCommentById)
   .patch(handleUpdateCommentById)
   .delete(handleDeleteCommentById);
+
+// Routes for replying to a comment and fetching its replies
+router
+  .route("/reply/:id")
+  .post(handleCreateReplyToCommentById)
+  .get(handleGetAllRepliesToCommentById);
 
 module.exports = router;
