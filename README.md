@@ -182,7 +182,6 @@ EMAIL_USER=your_gmail_id
 EMAIL_PASS=your_gmail_password_or_app_password
 
 4. Run the App
-```bash
 npm run dev
 ```
 
