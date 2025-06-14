@@ -182,13 +182,9 @@ EMAIL_USER=your_gmail_id
 EMAIL_PASS=your_gmail_password_or_app_password
 
 4. Run the App
-bash
-Copy
-Edit
+```bash
 npm run dev
----
----
----
+```
 
 ## 🔮 Future Enhancements
 
@@ -229,4 +225,3 @@ Feel free to use it for learning, extend it, or even deploy it in production wit
 
 Built with ❤️ by **ds1910**  
 If you like this project, consider giving it a ⭐️ and sharing it with fellow developers!
-
