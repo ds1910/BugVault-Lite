@@ -90,38 +90,41 @@ Built with extensibility and real-world interview preparation in mind, this proj
 
 ---
 
+
 ## 📁 Project Structure
 
+```
 bugvault-lite/
 │
 ├── controllers/
-│ ├── bug.js
-│ ├── comment.js
-│ └── user.js
+│   ├── bug.js
+│   ├── comment.js
+│   └── user.js
 │
 ├── model/
-│ ├── bug.js
-│ ├── comment.js
-│ ├── resetToken.js
-│ └── user.js
+│   ├── bug.js
+│   ├── comment.js
+│   ├── resetToken.js
+│   └── user.js
 │
 ├── middleware/
-│ └── index.js
+│   └── index.js
 │
 ├── routes/
-│ ├── bug.js
-│ ├── comment.js
-│ └── user.js
+│   ├── bug.js
+│   ├── comment.js
+│   └── user.js
 │
 ├── service/
-│ └── auth.js
+│   └── auth.js
 │
 ├── utils/
-│ └── sendEmail.js
+│   └── sendEmail.js
 │
 ├── .env
 ├── index.js
 └── package.json
+```
 
 
 ---
