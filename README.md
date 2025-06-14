@@ -154,8 +154,9 @@ bugvault-lite/
 
 ## 🛠️ Installation & Setup
 
-### 1. Clone the Repo
+
 ```bash
+1. Clone the Repo
 git clone https://github.com/your-username/bugvault-lite.git
 cd bugvault-lite
 
@@ -185,31 +186,29 @@ bash
 Copy
 Edit
 npm run dev
+---
 
+## 🔮 Future Enhancements
 
-🔮 Future Enhancements
-✅ Frontend Integration with React/Next.js
+✅ Frontend Integration with React/Next.js  
+🔁 Email Verification System  
+💬 Real-time comments using Socket.io  
+📊 Bug statistics dashboard for Admin  
+📂 File attachments (screenshots, logs)  
+📌 Label filters & advanced bug search  
+🔒 Rate limiting, helmet, CORS hardening  
+🔍 ElasticSearch-style bug search  
 
-🔁 Email Verification System
+---
 
-💬 Real-time comments using Socket.io
+## 📄 License
 
-📊 Bug statistics dashboard for Admin
-
-📂 File attachments (screenshots, logs)
-
-📌 Label filters & advanced bug search
-
-🔒 Rate limiting, helmet, CORS hardening
-
-🔍 ElasticSearch-style bug search
-
-
-
-📄 License
 This project is open-source and free to use for learning or as a base for production applications.
 
-🙌 Author
-Built with ❤️ by ds1910
+---
+
+## 🙌 Author
+
+Built with ❤️ by **ds1910**
 
 If you like this project, consider giving it a ⭐️ and sharing it with others!
